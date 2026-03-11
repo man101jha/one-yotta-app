@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "name": "one-yotta-app-flutter (Flutter ONEPLUS A6010)",
+            "program": "lib/main.dart",
+            "deviceId": "8bf0b236",
+            "request": "launch",
+            "type": "dart"
+        }
+    ]
+}

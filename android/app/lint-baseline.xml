@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.7.0" type="baseline" client="gradle" dependencies="false" name="AGP (8.7.0)" variant="fatal" version="8.7.0">
+
+    <issue
+        id="PackagedPrivateKey"
+        message="The `star_yotta_com/star_yotta_com.key` file seems to be a private key file. Please make sure not to embed this in your APK file.">
+        <location
+            file="src/main/res/raw/star_yotta_com/star_yotta_com.key"/>
+    </issue>
+
+    <issue
+        id="PackagedPrivateKey"
+        message="The `raw/start_yotta_key.pem` file seems to be a private key file. Please make sure not to embed this in your APK file.">
+        <location
+            file="src/main/res/raw/start_yotta_key.pem"/>
+    </issue>
+
+</issues>

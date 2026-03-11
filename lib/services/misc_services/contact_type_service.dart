@@ -1,0 +1,1 @@
+// https://uatmyaccountapi.yotta.com/my_account/api/v1/contact/contacttypes
