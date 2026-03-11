@@ -30,10 +30,19 @@ android {
 
     signingConfigs {
         create("release") {
-            keyAlias = keystoreProperties["keyAlias"] as String
-            keyPassword = keystoreProperties["keyPassword"] as String
-            storeFile = file(keystoreProperties["storeFile"] as String)
-            storePassword = keystoreProperties["storePassword"] as String
+            try {
+                keyAlias = keystoreProperties["keyAlias"] as String
+                keyPassword = keystoreProperties["keyPassword"] as String
+                storeFile = file(keystoreProperties["storeFile"] as String)
+                storePassword = keystoreProperties["storePassword"] as String
+            } catch (e: Exception) {
+                // If passwords are missing (like on GitHub Actions), fall back to debug keys
+                val debug = signingConfigs.getByName("debug")
+                keyAlias = debug.keyAlias
+                keyPassword = debug.keyPassword
+                storeFile = debug.storeFile
+                storePassword = debug.storePassword
+            }
         }
     }
 
